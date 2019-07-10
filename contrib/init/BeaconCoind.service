@@ -1,0 +1,26 @@
+[Unit]
+Description=BeaconCoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=BeaconCoin
+Group=BeaconCoin
+
+Type=forking
+PIDFile=/var/lib/BeaconCoind/BeaconCoind.pid
+
+ExecStart=/usr/bin/BeaconCoind -daemon -pid=/var/lib/BeaconCoind/BeaconCoind.pid \
+          -conf=/etc/BeaconCoin/BeaconCoin.conf -datadir=/var/lib/BeaconCoind
+
+ExecStop=-/usr/bin/BeaconCoin-cli -conf=/etc/BeaconCoin/BeaconCoin.conf \
+         -datadir=/var/lib/BeaconCoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

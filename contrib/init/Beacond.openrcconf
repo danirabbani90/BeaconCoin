@@ -1,0 +1,26 @@
+# /etc/conf.d/BeaconCoind: config file for /etc/init.d/BeaconCoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/BeaconCoin/BeaconCoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/BeaconCoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/BeaconCoind.pid"
+
+# Where to write BeaconCoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/BeaconCoind"
+
+# User and group to own BeaconCoind process
+#BITCOIND_USER="BeaconCoin"
+#BITCOIND_GROUP="BeaconCoin"
+
+# Path to BeaconCoind executable
+#BITCOIND_BIN="/usr/bin/BeaconCoind"
+
+# Nice value to run BeaconCoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
