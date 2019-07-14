@@ -14,8 +14,8 @@ windows=true
 osx=true
 
 # Other Basic variables
-SIGNER=danishrabbani
-VERSION=1
+SIGNER=danirabbani90
+VERSION=1.0
 commit=false
 url=https://github.com/danirabbani90/BeaconCoin
 proc=2
@@ -229,7 +229,7 @@ fi
 # Add a "v" if no -c
 if [[ $commit = false ]]
 then
-	COMMIT="v${VERSION}"
+	COMMIT="${VERSION}"
 fi
 echo ${COMMIT}
 
@@ -237,8 +237,8 @@ echo ${COMMIT}
 if [[ $setup = true ]]
 then
     sudo apt-get install ruby apache2 git apt-cacher-ng python-vm-builder qemu-kvm qemu-utils
-    git clone https://github.com/BeaconCoin/gitian.sigs.git
-    git clone https://github.com/BeaconCoin/BeaconCoin-detached-sigs.git
+    git clone https://github.com/danirabbani90/gitian.sigs.git
+    git clone https://github.com/danirabbani90/BeaconCoin-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
     pushd ./gitian-builder
     if [[ -n "$USE_LXC" ]]
