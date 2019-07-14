@@ -14,10 +14,10 @@ windows=true
 osx=true
 
 # Other Basic variables
-SIGNER=
-VERSION=
+SIGNER=danishrabbani
+VERSION=1
 commit=false
-url=https://github.com/BeaconCoin/BeaconCoin
+url=https://github.com/danirabbani90/BeaconCoin
 proc=2
 mem=2000
 lxc=true
