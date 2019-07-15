@@ -14,7 +14,7 @@ windows=true
 osx=true
 
 # Other Basic variables
-SIGNER=danirabbani90
+SIGNER=danirabbani90	
 VERSION=1.0
 commit=false
 url=https://github.com/danirabbani90/BeaconCoin
@@ -229,7 +229,7 @@ fi
 # Add a "v" if no -c
 if [[ $commit = false ]]
 then
-	COMMIT="${VERSION}"
+	COMMIT="v${VERSION}"
 fi
 echo ${COMMIT}
 
@@ -314,6 +314,7 @@ then
 	    ./bin/gbuild -j ${proc} -m ${mem} --commit BeaconCoin=${COMMIT} --url BeaconCoin=${url} ../BeaconCoin/contrib/gitian-descriptors/gitian-aarch64.yml
 	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-aarch64 --destination ../gitian.sigs/ ../BeaconCoin/contrib/gitian-descriptors/gitian-aarch64.yml
 	    mv build/out/BeaconCoin-*.tar.gz build/out/src/BeaconCoin-*.tar.gz ../BeaconCoin-binaries/${VERSION}
+	fi	
 	popd
 
         if [[ $commitFiles = true ]]
